@@ -1408,10 +1408,10 @@ GameObject:
   - component: {fileID: 1906129998}
   - component: {fileID: 1906129992}
   - component: {fileID: 1906129991}
-  - component: {fileID: 1906129994}
   - component: {fileID: 1906129995}
   - component: {fileID: 1906129996}
   - component: {fileID: 1906129997}
+  - component: {fileID: 1906129999}
   m_Layer: 0
   m_Name: ForceAdder
   m_TagString: Untagged
@@ -1492,17 +1492,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!247 &1906129994
-ConstantForce2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906129990}
-  m_Enabled: 1
-  m_Force: {x: 0, y: 0}
-  m_RelativeForce: {x: 0, y: 0}
-  m_Torque: 0
 --- !u!233 &1906129995
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -1565,8 +1554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9900c55c3b0f4395be31fb5566f2f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  constantSpeed: 100
   slider: {fileID: 1906129991}
-  leftForce: {x: -1, y: 0}
 --- !u!224 &1906129998
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1587,6 +1576,17 @@ RectTransform:
   m_AnchoredPosition: {x: 2.6584, y: -4.1800003}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!247 &1906129999
+ConstantForce2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906129990}
+  m_Enabled: 1
+  m_Force: {x: 10, y: 0}
+  m_RelativeForce: {x: 10, y: 0}
+  m_Torque: 0
 --- !u!1 &1962942107
 GameObject:
   m_ObjectHideFlags: 0
