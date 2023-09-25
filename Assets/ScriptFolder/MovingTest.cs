@@ -6,12 +6,10 @@ public class MovingTest : MonoBehaviour
 {
 
     public Rigidbody2D mB;
-    float moveSpeed = 3f;
+    float moveSpeed = 30f;
     float moveH;
-    float moveV;
 
-
-    public Vector3 unitForce = new Vector3(5f, 0f, 0f);
+    //public Vector3 unitForce = new Vector3(5f, 0f, 0f);
 
     void Start()
     {
@@ -21,13 +19,13 @@ public class MovingTest : MonoBehaviour
     void Update()
     {
         moveH = Input.GetAxisRaw("Horizontal");
-        moveV = Input.GetAxisRaw("Vertical");
+        //moveV = Input.GetAxisRaw("Vertical");
     }
 
-    void FixedUpdate()
-    {
-        mB.AddForce(new Vector2(moveH * moveSpeed,0f),ForceMode2D.Impulse);
+    void FixedUpdate(){
 
+        mB.AddForce(new Vector2(moveSpeed * moveH,0f),ForceMode2D.Impulse);
+        //mB.AddForce(transform.up * moveSpeed,ForceMode2D.Impulse);
 
     }
 }
